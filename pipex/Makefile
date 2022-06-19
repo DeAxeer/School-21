@@ -1,4 +1,4 @@
-SRCS			=	pipex.c ft_putstr_fd.c
+SRCS			=	pipex.c ft_putstr_fd.c ft_split.c ft_strnstr.c ft_strjoin.c path_s.c
 
 OBJS			= $(SRCS:.c=.o)
 
@@ -11,7 +11,7 @@ CFLAGS			= -Wall -Wextra -Werror -I.
 NAME			= pipex
 
 $(NAME):		$(OBJS) pipex.h Makefile
-				$(CC) $(CFLAGS) $(NAME) $(OBJS)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 all:			$(NAME)
 

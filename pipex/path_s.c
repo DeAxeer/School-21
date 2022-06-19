@@ -6,12 +6,11 @@
 /*   By: dpaper <dpaper@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 16:09:35 by dpaper            #+#    #+#             */
-/*   Updated: 2022/02/14 15:44:35 by dpaper           ###   ########.fr       */
+/*   Updated: 2022/02/15 15:52:03 by dpaper           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
-#include "stdio.h"
 
 char	**ft_path(char **env)
 {
@@ -35,9 +34,10 @@ void	ft_free(char **path)
 	while (path[i])
 		free(path[i++]);
 	free(path);
+	path = NULL;
 }
 
-char	*ft_cmd(char *argv, char **env)
+char	*ft_fname(char *argv, char **env)
 {
 	int		i;
 	char	*cmd;
